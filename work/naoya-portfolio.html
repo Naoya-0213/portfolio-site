@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 検索 no hit -->
+    <title>コーダー「Naoya」によるポートフォリオサイト</title>
+
+    <meta
+      name="description"
+      content="デザインからコーディングまで一貫して作成したポートフォリオサイトです。制作実績やスキル、自己紹介を掲載しています。ぜひご覧ください。"
+    />
+
+    <!-- ファビコン -->
+    <link rel="icon" href="/img/icon/favicon.ico" type="image/x-icon" />
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Knewave&family=Mansalva&family=Noto+Sans+JP:wght@100..900&family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- swiper読み込み -->
+    <link rel="stylesheet" href="./css/lib/swiper-bundle.min.css" />
+
+    <!-- css読み込み -->
+    <link rel="stylesheet" href="/work/css/style.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+  </head>
+  <body>
+    <!-- === workセクション　詳細 === -->
+    <div class="body-wrapper">
+      <!-- 1.work__header ========================================================== -->
+      <header>
+        <button id="js-drawer-icon" class="header-open">
+          <span class="drawer-icon__bar"></span>
+          <span class="drawer-icon__bar"></span>
+        </button>
+
+        <!-- sp）ドロワーメニュー -->
+        <div id="js-drawer__menu" class="drawer__menu">
+          <div class="drawer__menu__contents">
+            <!-- navメニュー -->
+            <nav class="drawer__nav">
+              <!-- menu1：home-->
+              <a href="../index.html#fv" class="drawer__nav__link">
+                <div class="drawer__nav__link-wrapper">
+                  <img
+                    src="./img/icon/home/paper-plane_icon-brown.png"
+                    alt="icon"
+                  />
+                  <span>Home -</span>
+                </div>
+              </a>
+
+              <!-- menu2：skill-->
+              <a href="../index.html#skill" class="drawer__nav__link">
+                <div class="drawer__nav__link-wrapper">
+                  <img src="./img/icon/skill/skill_icon-brown.png" alt="icon" />
+                  <span>Skill -</span>
+                </div>
+              </a>
+
+              <!-- menu3：work -->
+              <a href="../index.html#work" class="drawer__nav__link">
+                <div class="drawer__nav__link-wrapper">
+                  <img src="./img/icon/work/pc_icon-brown.png" alt="icon" />
+                  <span>Work -</span>
+                </div>
+              </a>
+
+              <!-- menu4：About me -->
+              <a href="../index.html#about-me" class="drawer__nav__link">
+                <div class="drawer__nav__link-wrapper">
+                  <img
+                    src="./img/icon/about-me/user_icon-brown.png"
+                    alt="icon"
+                  />
+                  <span>About me -</span>
+                </div>
+              </a>
+
+              <!-- menu5：contact -->
+              <a href="../index.html#contact" class="drawer__nav__link">
+                <div class="drawer__nav__link-wrapper">
+                  <img src="./img/icon/mail/email_icon-brown.png" alt="icon" />
+                  <span>Contact -</span>
+                </div>
+              </a>
+
+              <!-- snsリンク -->
+              <div class="sns__link">
+                <div class="sns__link-item">
+                  <a href="#" target="_blank" rel="nofollow noopener">
+                    <img
+                      src="./img/icon/line/line_icon-brown.png"
+                      alt="sns-icon"
+                    />
+                  </a>
+                </div>
+
+                <div class="sns__link-item">
+                  <a
+                    href="https://x.com/Naoya__in_web"
+                    target="_blank"
+                    rel="nofollow noopener"
+                  >
+                    <img src="./img/icon/x/x_icon-brown.png" alt="sns-icon" />
+                  </a>
+                </div>
+
+                <div class="sns__link-item">
+                  <a href="#" target="_blank" rel="nofollow noopener">
+                    <img
+                      src="./img/icon/instagram/instagram_icon-brown.png"
+                      alt="sns-icon"
+                    />
+                  </a>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+
+        <!-- pc）ドロワーメニュー -->
+        <div id="js-drawer__menu-pc" class="drawer__menu-pc">
+          <div class="drawer__menu-pc__contents">
+            <!-- navメニュー -->
+            <nav class="drawer__nav-pc">
+              <!-- menu1：home-->
+              <a href="../index.html#fv" class="drawer__nav__link-pc">
+                <div class="drawer__nav__link-wrapper-pc">
+                  <img
+                    src="./img/icon/home/paper-plane_icon-brown.png"
+                    alt="icon"
+                  />
+                  <span>Home -</span>
+                </div>
+              </a>
+
+              <!-- menu2：skill-->
+              <a href="../index.html#skill" class="drawer__nav__link-pc">
+                <div class="drawer__nav__link-wrapper-pc">
+                  <img src="./img/icon/skill/skill_icon-brown.png" alt="icon" />
+                  <span>Skill -</span>
+                </div>
+              </a>
+
+              <!-- menu3：work -->
+              <a href="../index.html#work" class="drawer__nav__link-pc">
+                <div class="drawer__nav__link-wrapper-pc">
+                  <img src="./img/icon/work/pc_icon-brown.png" alt="icon" />
+                  <span>Work -</span>
+                </div>
+              </a>
+
+              <!-- menu4：About me -->
+              <a href="../index.html#about-me" class="drawer__nav__link-pc">
+                <div class="drawer__nav__link-wrapper-pc">
+                  <img
+                    src="./img/icon/about-me/user_icon-brown.png"
+                    alt="icon"
+                  />
+                  <span>About me -</span>
+                </div>
+              </a>
+
+              <!-- menu5：contact -->
+              <a href="../index.html#contact" class="drawer__nav__link-pc">
+                <div class="drawer__nav__link-wrapper-pc">
+                  <img src="./img/icon/mail/email_icon-brown.png" alt="icon" />
+                  <span>Contact -</span>
+                </div>
+              </a>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      <!-- 2.work__details ========================================================= -->
+      <section class="work__details">
+        <div class="work__details__inner inner">
+          <div class="section__title work__details-title">
+            <h1 class="section__title-head">Works -</h1>
+            <p class="section__title-sub">これまで作成したサイト実績</p>
+          </div>
+          <div class="work__details__contents">
+            <!-- サイトイメージ -->
+            <div class="work__details__image">
+              <!-- SP表示用 -->
+              <div class="work__details__image-sp">
+                <div class="image-sp-frame">
+                  <div class="image-sp-design">
+                    <img
+                      src="../img/work/naoya-portfolio/naoya-portfolio__sp-design.webp"
+                      alt="サイトイメージ"
+                    />
+                  </div>
+                </div>
+
+                <!-- スクロールダウン　デコレーション -->
+                <p class="work__scrolldown-text">scroll</p>
+                <div class="work__scrolldown-arrow"></div>
+              </div>
+              <!-- PC表示用 -->
+              <div class="work__details__image-pc">
+                <div class="image-pc-frame">
+                  <div class="image-pc-design">
+                    <img
+                      src="../img/work/naoya-portfolio/naoya-portfolio__pc-design.webp"
+                      alt="サイトイメージ"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- サイト詳細 -->
+            <div class="work__details__text">
+              <!-- タイトル -->
+              <div class="work__details__title">
+                <div class="work__details__title-icon common-button-small">
+                  <p>個人制作</p>
+                </div>
+                <div class="work__details__title-text">
+                  <span>ポートフォリオサイト</span>
+                </div>
+              </div>
+
+              <!-- 説明詳細 -->
+              <div class="work__details-text-items">
+                <div class="work__details-text-item">
+                  <div class="work__details-text-wrapper">
+                    <h3 class="work__details-text-head fade-in-up">概要</h3>
+                    <p class="work__details-text-sub fade-in-up">
+                      実績掲載用のポートフォリオサイトとして、デザイン設計からコーディング、公開まで一貫して自作しました。これまで学んだ技術を応用し、動きのある見やすいサイトを意識して制作しました。
+                    </p>
+                  </div>
+                </div>
+                <div class="work__details-text-item">
+                  <div class="work__details-text-wrapper">
+                    <h3 class="work__details-text-head fade-in-up">
+                      ターゲット
+                    </h3>
+                    <p class="work__details-text-sub fade-in-up">
+                      企業の採用担当者の方々
+                    </p>
+                  </div>
+                </div>
+                <div class="work__details-text-item">
+                  <div class="work__details-text-wrapper">
+                    <h3 class="work__details-text-head fade-in-up">課題</h3>
+                    <p class="work__details-text-sub fade-in-up">
+                      自分のスキルや実績を効果的にアピールするための専用サイトがなく、これまでの学習内容や今後取り組みたい目標を一目で分かりやすくまとめたかった。
+                    </p>
+                  </div>
+                </div>
+                <div class="work__details-text-item">
+                  <div class="work__details-text-wrapper">
+                    <h3 class="work__details-text-head fade-in-up">目的</h3>
+                    <p class="work__details-text-sub fade-in-up">
+                      転職活動において書類選考の通過を目指し、採用担当者の方々に向けて実績や今後の学習計画をしっかりと示すことで、未経験であっても自分のポテンシャルを感じていただけるようにしたい。
+                    </p>
+                  </div>
+                </div>
+                <div class="work__details-text-item">
+                  <div class="work__details-text-wrapper">
+                    <h3 class="work__details-text-head fade-in-up">担当領域</h3>
+                    <p class="work__details-text-sub fade-in-up">
+                      サイトデザイン作成<br />コーディング<br />サーバー取得＆サイト公開<br />サイト更新＆修正
+                    </p>
+                  </div>
+                </div>
+                <div class="work__details-text-item">
+                  <div class="work__details-text-wrapper">
+                    <h3 class="work__details-text-head fade-in-up">制作期間</h3>
+                    <p class="work__details-text-sub fade-in-up">
+                      サイトデザイン作成　　　　　　3週間<br />コーディング　　　　　　　　　2週間<br />サイト公開・サイト更新＆修正　1週間
+                    </p>
+                  </div>
+                </div>
+                <div class="work__details-text-item">
+                  <div class="work__details-text-wrapper">
+                    <h3 class="work__details-text-head fade-in-up">
+                      使用ツール
+                    </h3>
+                    <p class="work__details-text-sub fade-in-up">
+                      Figma / Visual Studio Code
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3.work__other =========================================================== -->
+      <section class="other-works">
+        <div class="other-works__inner inner">
+          <div class="section__title fade-in-up">
+            <h1 class="section__title-head">Other Works -</h1>
+            <p class="section__title-sub">その他、作成サイト実績</p>
+          </div>
+        </div>
+
+        <!-- swiper -->
+        <div class="work__card">
+          <div class="work__card__inner">
+            <div class="work__swiper-container">
+              <div class="swiper work__swiper">
+                <div class="swiper-wrapper work__swiper-wrapper">
+                  <!-- swiperコンテンツ1）Naoya's portfolio-->
+                  <div class="swiper-slide work__swiper-slide">
+                    <a
+                      href="./naoya-portfolio.html"
+                      rel="nofollow noopener"
+                      class="work__detals-link"
+                    >
+                      <div class="work__swiper-slide-contents">
+                        <div class="pc-img">
+                          <img
+                            src="../img/work/naoya-portfolio/naoya-portfolio-pc.webp"
+                            alt="サイトイメージ画像pc"
+                          />
+                        </div>
+                        <div class="sp-img">
+                          <img
+                            src="../img/work/naoya-portfolio/naoya-portfolio.webp"
+                            alt="サイトイメージ画像sp"
+                          />
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <!-- swiperコンテンツ2）onomichi -->
+                  <div class="swiper-slide work__swiper-slide">
+                    <a
+                      href="./onomichi.html"
+                      rel="nofollow noopener"
+                      class="work__detals-link"
+                    >
+                      <div class="work__swiper-slide-contents">
+                        <div class="pc-img">
+                          <img
+                            src="../img/work/onomichi/onomichi-pc.webp"
+                            alt="サイトイメージ画像pc"
+                          />
+                        </div>
+                        <div class="sp-img">
+                          <img
+                            src="../img/work/onomichi/onomichi.webp"
+                            alt="サイトイメージ画像sp"
+                          />
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <!-- swiperコンテンツ3）sabolon -->
+                  <div class="swiper-slide work__swiper-slide">
+                    <a
+                      href="./sabolon.html"
+                      rel="nofollow noopener"
+                      class="work__detals-link"
+                    >
+                      <div class="work__swiper-slide-contents">
+                        <div class="pc-img">
+                          <img
+                            src="../img/work/sabolon/sabolon-pc.webp"
+                            alt="サイトイメージ画像pc"
+                          />
+                        </div>
+                        <div class="sp-img">
+                          <img
+                            src="../img/work/sabolon/sabolon.webp"
+                            alt="サイトイメージ画像sp"
+                          />
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <!-- swiperコンテンツ4）oha -->
+                  <div class="swiper-slide work__swiper-slide">
+                    <a
+                      href="./oha.html"
+                      rel="nofollow noopener"
+                      class="work__detals-link"
+                    >
+                      <div class="work__swiper-slide-contents">
+                        <div class="pc-img">
+                          <img
+                            src="../img/work/oha/oha-pc.webp"
+                            alt="サイトイメージ画像pc"
+                          />
+                        </div>
+                        <div class="sp-img">
+                          <img
+                            src="../img/work/oha/oha.webp"
+                            alt="サイトイメージ画像sp"
+                          />
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-pagination work__swiper-pagination"></div>
+              <div class="swiper-button-prev work__swiper-button-prev">
+                <img src="./img/icon/next/next-left.png" alt="prevボタン" />
+              </div>
+              <div class="swiper-button-next work__swiper-button-next">
+                <img src="./img/icon/next/next-right.png" alt="nextボタン" />
+              </div>
+            </div>
+          </div>
+
+          <!-- デコレーション　吹き出し -->
+          <div class="swiper__decoration">
+            <img
+              src="../img/icon/balloon/icon-click-left.webp"
+              alt="クリック吹き出し"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- 4.work__contact ========================================================= -->
+      <section class="footer-contact" id="contact">
+        <div class="footer-contact__inner inner">
+          <!-- セクションタイトル -->
+          <div class="section__title">
+            <h1 class="section__title-head">Contact -</h1>
+            <p class="section__title-sub">お問い合わせ</p>
+          </div>
+
+          <!-- コンテンツ -->
+          <div class="footer-contact__contents-wrapper">
+            <div class="footer-contact__contents">
+              <div class="footer-contact__content1">
+                <div class="footer-contact__text">
+                  <p>
+                    HP作成などのご依頼、その他問い合わせは当アドレスへご連絡ください。XのDMでも受付しております。<br />＊line・Instagramは、準備中です...
+                  </p>
+                </div>
+
+                <!-- メール送信リンク -->
+                <div class="footer-contact__mail">
+                  <a
+                    href="mailto:naoya.work0213&#64;gmail.com"
+                    class="footer-contact__mail-link"
+                  >
+                    <div class="footer-contact__mail-icon"></div>
+                    <p>naoya.work0213@gmail.com</p></a
+                  >
+                </div>
+              </div>
+
+              <div class="footer-contact__content2">
+                <!-- ページトップボタン -->
+                <button class="pagetop-icon js-pagetop-icon">
+                  <img
+                    src="../img/icon/balloon/icon-pagetop.webp"
+                    alt="ページトップアイコン"
+                  />
+                </button>
+
+                <div class="footer-contact-link-wrapper">
+                  <!-- snsリンク -->
+                  <div class="sns__link footer-contact__sns__link">
+                    <div class="sns__link-item footer-contact__sns__link-item">
+                      <a href="#" target="_blank" rel="nofollow noopener">
+                        <img
+                          src="./img/icon/line/line_icon-cream2.png"
+                          alt="sns-icon"
+                        />
+                      </a>
+                    </div>
+
+                    <div class="sns__link-item footer-contact__sns__link-item">
+                      <a
+                        href="https://x.com/Naoya__in_web"
+                        target="_blank"
+                        rel="nofollow noopener"
+                      >
+                        <img
+                          src="./img/icon/x/x_icon-cream2.png"
+                          alt="sns-icon"
+                        />
+                      </a>
+                    </div>
+
+                    <div class="sns__link-item footer-contact__sns__link-item">
+                      <a href="#" target="_blank" rel="nofollow noopener">
+                        <img
+                          src="./img/icon/instagram/instagram_icon-cream2.png"
+                          alt="sns-icon"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="footer__menu-pc">
+              <a href="../index.html#fv" class="footer__menu-pc-item">Home -</a>
+              <a href="../index.html#skill" class="footer__menu-pc-item"
+                >Skill -</a
+              >
+              <a href="../index.html#work" class="footer__menu-pc-item"
+                >Work -</a
+              >
+              <a href="../index.html#about-me" class="footer__menu-pc-item"
+                >About me -</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5.work__footer ========================================================== -->
+      <footer class="footer">
+        <div class="footer__copylight-wrapper">
+          <div class="footer__copylight">
+            <span>Icons made by フリーピック from www.flaticon.com</span>
+            <small>© 2024 Naoya’s Portfolio</small>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- 読み込み ================================================================ -->
+    <!-- swiper js読み込み -->
+    <script src="./js/lib/swiper-bundle.min.js"></script>
+
+    <!-- GSAPライブラリを読み込み -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <!-- jQuery読み込み -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- js読み込み -->
+    <script src="./js/script.js"></script>
+  </body>
+</html>

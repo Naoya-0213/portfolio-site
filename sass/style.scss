@@ -1,0 +1,12 @@
+@use "./breakpoints";
+@use "./common-css";
+
+// 各section読み込み
+@use "./1.header/header";
+@use "./2.fv/fv";
+@use "./3.skill/skill";
+@use "./4.work/work";
+@use "./5.about-me/about-me";
+@use "./6.like/_like";
+@use "./7.contact/contact";
+@use "./8.footer/footer";

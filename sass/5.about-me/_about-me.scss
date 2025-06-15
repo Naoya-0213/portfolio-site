@@ -1,0 +1,313 @@
+@use "../breakpoints";
+@use "../common-css";
+
+// ================================================
+// about me
+// ================================================
+.about-me {
+  margin-top: 30px;
+}
+
+.about-me__inner {
+  max-width: calc(600px + 20px * 2);
+  margin: 0 auto;
+
+  @include breakpoints.mq(pc) {
+    max-width: calc(1080px + 40px * 2);
+  }
+}
+
+// コンテンツ
+.about-me__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 20px;
+}
+
+.about-me__contents {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 0 10px 0 10px;
+  margin: 0 auto;
+
+  @media (min-width: 600px) {
+    flex-direction: row;
+    max-width: 824px;
+    padding-left: 20px;
+    padding-right: 20px;
+    gap: 40px;
+  }
+
+  @include breakpoints.mq(pc) {
+    gap: 60px;
+  }
+}
+
+// 写真・名前
+.about-me__head {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+
+.about-me__image {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  // box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.25);
+
+  img {
+    width: 100%;
+    border-radius: 10px;
+  }
+}
+
+.about-me__name {
+  text-align: center;
+}
+
+.about-me__name-main {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: common-css.$font-family-en;
+}
+
+.about-me__name-sub {
+}
+
+// デコレーション
+.about-me_decoration {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+// テキスト
+.about-me__head-text {
+  padding: 10px;
+  max-width: 450px;
+}
+
+// ================================================
+// モーダル
+// ================================================
+.about-me__modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  @media (min-width: 500px) {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.about-me__modal-button {
+}
+
+//初期設定==================
+button {
+  background: none;
+}
+:where(dialog) {
+  width: unset;
+  max-width: unset;
+  height: unset;
+  max-height: unset;
+  padding: unset;
+  color: unset;
+  background-color: unset;
+  border: unset;
+  overflow: unset;
+}
+body:has(dialog[open]) {
+  overflow: hidden;
+}
+.wrapper:has(dialog[open]) {
+  overflow-y: auto;
+  scrollbar-gutter: stable; //スクロールバーのスペースを常に確保する
+}
+//ボタンのスタイル ============
+.modal__open-btn {
+  // 共通ボタンクラスにて指定。
+}
+//モーダルのスタイル ============
+dialog {
+  &::backdrop {
+    opacity: 0;
+    transition: background 0.3s ease-in-out;
+  }
+  &.js-show {
+    &.modal__content {
+      opacity: 1;
+    }
+    &::backdrop {
+      opacity: 1;
+      //背景画像
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(6px);
+    }
+  }
+}
+
+.modal__content {
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  //モーダル枠組みのスタイル
+  width: min(600px, 95%);
+  max-height: 80vh;
+  background: common-css.$color1;
+  padding: 15px;
+  border-radius: 20px;
+
+  @media (min-width: 600px) {
+    padding: 20px;
+  }
+}
+.modal__inner {
+  overflow-y: scroll;
+  height: 100%;
+  position: relative;
+}
+.modal__body {
+  height: fit-content;
+
+  //modal内のスタイル
+
+  h3 {
+    height: 40px;
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+
+    @media (min-width: 600px) {
+      margin-left: 20px;
+    }
+  }
+
+  p {
+  }
+}
+
+// modal内のスタイル
+// モーダル共通
+.modal__text-items {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-top: 10px;
+
+  @media (min-width: 600px) {
+    gap: 20px;
+  }
+}
+
+.modal__text-item {
+  padding: 0 10px 15px 10px;
+  border-bottom: 1px solid common-css.$color2;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  @media (min-width: 600px) {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-bottom: 20px;
+  }
+}
+
+.modal__text-item-head {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  @media (min-width: 600px) {
+    flex-direction: row;
+    gap: 20px;
+  }
+}
+
+.modal__text-head-date {
+}
+
+.modal__text-head-title {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.modal__text-item-main {
+}
+
+// モーダル2
+.modal__text2-item-head {
+  display: flex;
+  gap: 10px;
+}
+
+.modal__text-head-number {
+}
+
+//閉じるボタンのスタイル =========
+// closeアイコン
+.modal__close-btn {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  z-index: 2;
+  top: 15px;
+  right: 15px;
+  font-size: 30px;
+
+  outline: none;
+
+  @media (min-width: 600px) {
+    top: 20px;
+    right: 20px;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+// 閉じるボタン
+.modal__text-close-button {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+}

@@ -1,0 +1,245 @@
+@use "../breakpoints";
+@use "../common-css";
+
+// ================================================
+// like
+// ================================================
+.like {
+  margin-top: 30px;
+}
+
+.like__inner {
+  max-width: calc(600px + 20px * 2);
+  margin: 0 auto;
+
+  @include breakpoints.mq(pc) {
+    max-width: calc(1080px + 40px * 2);
+  }
+}
+
+.like__contents {
+  margin-top: 20px;
+  position: relative;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: 600px) {
+    margin-top: 30px;
+  }
+}
+
+.like__items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 10px 0 10px;
+}
+
+.like__item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 10px 20px 10px;
+
+  &:nth-child(1) {
+    border-bottom: 1px solid common-css.$color2;
+  }
+
+  @media (min-width: 600px) {
+    flex-direction: row;
+  }
+}
+
+.like__item-head {
+  display: flex;
+  gap: 10px;
+
+  @media (min-width: 600px) {
+    width: 30%;
+  }
+}
+
+.like__item-head-number {
+  p {
+  }
+}
+
+.like__item-head-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.like__item-text {
+  span {
+    font-weight: 700;
+  }
+
+  @media (min-width: 600px) {
+    width: 70%;
+  }
+}
+
+// ================================================
+// like デコレーション
+// ================================================
+.like__decoration1 {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: -40px;
+  right: 100px;
+
+  @media (min-width: 600px) {
+    width: 40px;
+    height: 40px;
+    top: -80px;
+    right: 60px;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.like__decoration2 {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: -20px;
+  right: 30px;
+
+  @media (min-width: 600px) {
+    width: 40px;
+    height: 40px;
+    top: -55px;
+    right: -25px;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+// ================================================
+// like swiper
+// ================================================
+.like__card {
+  padding-block: 20px;
+  margin: 0 auto;
+  position: relative;
+
+  @include breakpoints.mq(pc) {
+    padding-block: 40px;
+    max-width: 1070px;
+  }
+}
+
+.like__card__inner {
+}
+
+.like__swiper-container,
+.like__swiper,
+.like__swiper-wrapper,
+.like__swiper-slide {
+  position: relative;
+}
+.like__swiper-container {
+}
+.like__swiper {
+}
+.like__swiper-wrapper {
+}
+.like__swiper-slide {
+  width: 192px;
+  height: 282px;
+  border-radius: 15px;
+  border: 1px solid #795549;
+  background: common-css.$color2;
+}
+
+// スライドcss
+.like__swiper-slide__contents {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.like__swiper-slide__image {
+  width: 150px;
+  height: 150px;
+
+  img {
+    width: 100%;
+  }
+}
+
+.like__swiper-slide__main {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  p {
+  }
+}
+
+.like__swiper-slide-date {
+  p {
+  }
+}
+
+.like__swiper-slide__text {
+  font-size: 14px;
+  p {
+  }
+}
+
+//位置のreset
+.swiper-button-prev,
+.swiper-button-next,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  //   top: unset;
+  //   bottom: unset;
+  //   left: unset;
+  //   right: unset;
+  //   margin: 0;
+  //   padding: 0;
+}
+// =============================
+// ナビゲーションボタン
+// =============================
+//デフォルトのボタンを初期化
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  content: ""; //デフォルトのものを初期化
+}
+//各ボタンのカスタマイズ
+.like__swiper-button-prev,
+.like__swiper-button-next {
+  width: 30px;
+  height: auto;
+  aspect-ratio: 1;
+  display: none;
+  top: -15%;
+  translate: 0 -50%;
+
+  @include breakpoints.mq(pc) {
+    display: block;
+  }
+}
+.like__swiper-button-prev {
+  right: 100px;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.like__swiper-button-next {
+  right: 50px;
+
+  img {
+    width: 100%;
+  }
+}

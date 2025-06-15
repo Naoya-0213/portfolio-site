@@ -1,0 +1,9 @@
+@use "../sass/breakpoints";
+@use "../sass/common-css";
+
+// section　読み込み
+@use "../sass/1.work__header/work__header";
+@use "../sass/2.work__details/work__details";
+@use "../sass/3.work__other/work__other";
+@use "../sass/4.work__contact/work__contact";
+@use "../sass/5.work__footer/work__footer";

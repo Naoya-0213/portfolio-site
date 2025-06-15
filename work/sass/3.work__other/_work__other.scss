@@ -1,0 +1,272 @@
+@use "../breakpoints";
+@use "../common-css";
+
+// ================================================
+// other work
+// ================================================
+.other-works {
+  position: relative;
+  margin-top: 20px;
+  font-size: common-css.$font-size-sp;
+
+  @include breakpoints.mq(pc) {
+    font-size: common-css.$font-size-pc;
+  }
+}
+
+.other-works__inner {
+  max-width: calc(600px + 20px * 2);
+  margin: 0 auto;
+
+  @include breakpoints.mq(pc) {
+    max-width: calc(1080px + 40px * 2);
+  }
+}
+
+// デコレーション　クリック吹き出し
+.swiper__decoration {
+  position: absolute;
+  top: -60px;
+  right: 50px;
+  max-width: 130px;
+  width: calc(85px / 375px * 100%);
+
+  transform: rotate(-5deg);
+
+  opacity: 0;
+  animation: fadeInOut 5s ease-in-out infinite; /* アニメーションをループ */
+
+  @media (min-width: 450px) {
+    top: -75px;
+  }
+
+  @media (min-width: 530px) {
+    top: -90px;
+  }
+
+  @media (min-width: 600px) {
+    right: 140px;
+  }
+
+  @media (min-width: 650px) {
+    right: 160px;
+  }
+
+  @media (min-width: 768px) {
+    top: -75px;
+    right: 200px;
+  }
+
+  @media (min-width: 800px) {
+    right: 260px;
+  }
+  @media (min-width: 900px) {
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0; /* 完全に消える */
+  }
+  25% {
+    opacity: 1; /* 徐々に現れる */
+  }
+  75% {
+    opacity: 1; /* 表示を維持 */
+  }
+  100% {
+    opacity: 0; /* 徐々に消える */
+  }
+}
+
+// ================================================
+// swiper
+// ================================================
+
+// 見た目css
+.work__card {
+  padding-block: 30px;
+  margin: 0 auto;
+  position: relative;
+
+  @include breakpoints.mq(pc) {
+    padding-block: 50px;
+    max-width: 900px;
+  }
+}
+
+.work__card__inner {
+  //   width: min(calc(840px + 20px * 2), 100%);
+  // padding-inline: 20px;
+  margin-inline: auto;
+  position: relative;
+}
+// swiperコンテンツcss
+.work__swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 335px;
+
+  p {
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  @media (min-width: 600px) {
+    width: 280px;
+  }
+}
+
+.work__detals-link {
+  width: 335px;
+  height: auto;
+  aspect-ratio: 335 / 240;
+  margin: 0 auto;
+
+  @include breakpoints.mq(pc) {
+    width: 280px;
+  }
+}
+
+.work__swiper-slide-contents {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+
+  background: common-css.$color2;
+  border-radius: 15px;
+  border: 1px solid common-css.$color3;
+}
+
+.pc-img {
+  width: 310px;
+
+  @media (min-width: 600px) {
+    width: 260px;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.sp-img {
+  width: 75px;
+  position: absolute;
+  top: 72px;
+  right: 20px;
+
+  @media (min-width: 600px) {
+    width: 60px;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+// swiper実装css
+.work__swiper-container,
+.work__swiper,
+.work__swiper-wrapper,
+.work__swiper-slide {
+  position: relative;
+}
+
+.work__swiper-container {
+}
+
+.work__swiper {
+}
+
+.work__swiper-wrapper {
+}
+
+.work__swiper-slide {
+}
+
+//位置のreset
+.swiper-button-prev,
+.swiper-button-next,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  top: unset;
+  bottom: unset;
+  left: unset;
+  right: unset;
+  margin: 0;
+  padding: 0;
+}
+
+// =============================
+// ナビゲーションボタン
+// =============================
+//デフォルトのボタンを初期化
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  content: ""; //デフォルトのものを初期化
+}
+
+//各ボタンのカスタマイズ
+.swiper-button-prev,
+.swiper-button-next {
+  width: 30px;
+  height: auto;
+  aspect-ratio: 1;
+  display: none;
+  top: -25%;
+  translate: 0 -50%;
+
+  @media (min-width: 600px) {
+    display: block;
+  }
+}
+.swiper-button-prev {
+  right: 100px;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.swiper-button-next {
+  right: 50px;
+
+  img {
+    width: 100%;
+  }
+}
+
+// =============================
+// ページネーション (bullets)
+// =============================
+//位置の設定 (枠組み)
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  top: calc(100% + 20px);
+}
+
+//それぞれのページネーション
+.swiper-pagination-bullets.swiper-pagination-horizontal
+  .swiper-pagination-bullet {
+  opacity: 1;
+  width: 12px;
+  height: auto;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: common-css.$color2;
+  margin-inline: calc(11px / 2);
+}
+
+//activeな部分
+.swiper-pagination-bullets.swiper-pagination-horizontal
+  .swiper-pagination-bullet-active {
+  background: common-css.$color3;
+}

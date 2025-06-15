@@ -1,0 +1,247 @@
+@use "../breakpoints";
+@use "../common-css";
+
+// ================================================
+// work header
+// ================================================
+.header {
+}
+
+// sp：ハンバーガーicon表示 ----------------
+.header-open {
+  // tb時の幅 自動調整
+  width: calc(45px / 375px * 100%);
+  min-width: 32px;
+  max-width: 50px;
+  aspect-ratio: 45 / 15;
+
+  // 上部配置
+  position: fixed;
+  top: 20px;
+  right: 20px;
+
+  // ハンバーガーアイコン均等配置
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  // 最前に配置
+  z-index: 999;
+
+  // クリック時のバツボタン
+  &.is-checked {
+    .drawer-icon__bar {
+      &:nth-of-type(1) {
+        transform: rotate(18deg);
+      }
+
+      &:nth-of-type(2) {
+        transform: rotate(-18deg);
+      }
+    }
+  }
+}
+
+.drawer-icon__bar {
+  width: 100%;
+  height: 1px;
+  background: common-css.$color3;
+  transition: transform 0.9s;
+  transform-origin: left;
+}
+
+// ================================================
+// work sp）ドロワーメニュー
+// ================================================
+.drawer__menu {
+  width: 100%;
+  height: 100dvh;
+  background: common-css.$color2;
+  font-family: common-css.$font-family-en;
+  color: common-css.$color3;
+  font-size: 20px;
+
+  transform: translateY(-100%);
+  transition: transform 1s;
+  position: fixed;
+  top: 0;
+
+  z-index: 100;
+  opacity: 0.9;
+
+  &.is-checked {
+    transform: translateY(0%);
+  }
+
+  @media (min-width: 600px) {
+    display: none;
+  }
+}
+
+.drawer__menu__contents {
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.drawer__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+}
+
+.drawer__nav__link {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+
+  span {
+  }
+}
+
+.drawer__nav__link-wrapper {
+  width: 135px;
+  display: flex;
+  gap: 30px;
+
+  @include breakpoints.mq(pc) {
+    width: 120px;
+  }
+
+  img {
+    width: 25px;
+    height: 25px;
+    margin-top: 5px;
+
+    @include breakpoints.mq(pc) {
+      margin-top: 0;
+    }
+  }
+}
+
+// ドロワーメニュー展開：snsリンク
+.sns__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  margin: 0 auto;
+}
+
+.sns__link-item {
+  width: 25px;
+  height: 25px;
+
+  img {
+    width: 100%;
+  }
+}
+
+// ================================================
+// work pc）ドロワーメニュー
+// ================================================
+.drawer__menu-pc {
+  display: none;
+
+  width: 230px;
+  height: 400px;
+  background: common-css.$color2;
+  font-family: common-css.$font-family-en;
+  color: common-css.$color3;
+  font-size: 16px;
+  border-radius: 0px 0px 0px 40px;
+
+  transform: translateY(-105%);
+  transition: transform 1s;
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  z-index: 100;
+
+  box-shadow: -7px 7px 15px 0px rgba(0, 0, 0, 0.25);
+
+  &.is-checked {
+    transform: translateY(0%);
+  }
+
+  @media (min-width: 600px) {
+    display: block;
+  }
+}
+
+.drawer__menu-pc__contents {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.drawer__nav-pc {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.drawer__nav__link-pc {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+
+  span {
+  }
+}
+
+.drawer__nav__link-wrapper-pc {
+  width: 120px;
+  display: flex;
+  gap: 30px;
+
+  img {
+    width: 25px;
+    height: 25px;
+    transition: transform 0.3s;
+  }
+
+  span {
+    transition: transform 0.3s;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background: common-css.$color3;
+      scale: 0;
+      transform-origin: right center;
+      transition: scale 0.5s ease;
+    }
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      cursor: pointer;
+      span {
+        transform: scale(1.15);
+
+        &::after {
+          scale: 1;
+          transform-origin: left center;
+          transition: scale 0.5s ease;
+        }
+      }
+
+      img {
+        transform: scale(1.15);
+      }
+    }
+  }
+}

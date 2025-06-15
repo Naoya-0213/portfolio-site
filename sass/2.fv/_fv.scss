@@ -1,0 +1,260 @@
+@use "../breakpoints";
+@use "../common-css";
+
+// ================================================
+// fv
+// ================================================
+.fv {
+  position: relative;
+}
+
+.fv__inner {
+  margin: 0 auto;
+
+  @media (min-width: 600px) {
+    max-width: calc(1080px + 40px * 2);
+  }
+}
+
+.fv__contents {
+  position: relative;
+
+  @media (min-width: 600px) {
+    display: flex;
+    flex-direction: row-reverse;
+    height: auto;
+  }
+}
+
+.fv__img {
+  width: 100%;
+  aspect-ratio: 375 / 562;
+  background: url(/img/fv/fv-sp.webp) no-repeat center center / cover;
+
+  @media (min-width: 600px) {
+    aspect-ratio: 900 / 660;
+    background: url(/img/fv/fv-pc.webp) no-repeat center center / cover;
+    flex: 7;
+    border-bottom-left-radius: 25px;
+  }
+
+  @media (min-width: 1161px) {
+    border-bottom-right-radius: 30px;
+  }
+}
+
+// sp）logo
+.fv__logo-sp {
+  width: calc(200px / 375px * 100%);
+  transform: rotate(-13deg);
+
+  position: absolute;
+  top: 0;
+  left: 5px;
+
+  @media (min-width: 600px) {
+    display: none;
+  }
+}
+
+// ================================================
+// pc）menu
+// ================================================
+.fv__menu-pc {
+  display: none;
+
+  @media (min-width: 600px) {
+    flex: 3;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+// pc）logo
+.fv__logo-pc {
+  display: none;
+
+  @media (min-width: 600px) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex: 4;
+
+    img {
+      width: calc(200px / 384px * 100%);
+      transform: rotate(-13deg);
+    }
+  }
+}
+
+//  pc）nav
+.fv__menu__nav-pc {
+  display: none;
+
+  @media (min-width: 600px) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    flex: 6;
+
+    color: common-css.$color3;
+    font-family: common-css.$font-family-en;
+  }
+}
+
+.nav-pc {
+  height: 100%;
+  display: grid;
+  justify-items: center;
+
+  grid-template-rows: repeat(6, 1fr); /* 6等分する */
+}
+
+.nav__link-pc {
+  width: 110px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+
+  @media (min-width: 1080px) {
+    width: 130px;
+  }
+}
+
+.nav__link-wrapper-pc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  @media (min-width: 900px) {
+    gap: 25px;
+  }
+
+  img {
+    width: 20px;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    transition: transform 0.3s;
+
+    @media (min-width: 1080px) {
+      width: 25px;
+    }
+  }
+
+  span {
+    position: relative;
+    transition: transform 0.3s;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background: common-css.$color3;
+      scale: 0;
+      transform-origin: right center;
+      transition: scale 0.5s ease;
+    }
+
+    @media (min-width: 768px) {
+      font-size: 14px;
+    }
+
+    @media (min-width: 900px) {
+      font-size: 16px;
+    }
+
+    @media (min-width: 1080px) {
+      font-size: 18px;
+    }
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      cursor: pointer;
+      span {
+        transform: scale(1.15);
+
+        &::after {
+          scale: 1;
+          transform-origin: left center;
+          transition: scale 0.5s ease;
+        }
+      }
+
+      img {
+        transform: scale(1.15);
+      }
+    }
+  }
+}
+
+// snsリンク
+.sns__link-pc {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: 900px) {
+    gap: 25px;
+  }
+}
+
+.sns__link-pc-item {
+  img {
+    display: block;
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s;
+
+    @media (min-width: 1080px) {
+      width: 25px;
+      height: 25px;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
+// デコレーション
+.fv-decoration {
+  display: none;
+  position: absolute;
+  top: 10%;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  border-radius: 30px;
+  border-bottom-right-radius: 0;
+  opacity: 0.5;
+  z-index: -1;
+
+  background: common-css.$color2;
+
+  @media (min-width: 600px) {
+    display: block;
+  }
+
+  @media (min-width: 1161px) {
+    display: block;
+    top: 50px;
+    right: -80px;
+    border-bottom-right-radius: 25px;
+  }
+}

@@ -1,0 +1,216 @@
+@use "../breakpoints";
+@use "../common-css";
+
+// ================================================
+// footer contact
+// ================================================
+.footer-contact {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  margin-top: 20px;
+  color: common-css.$color1;
+  background: common-css.$color3;
+}
+
+.footer-contact__inner {
+  max-width: calc(600px + 20px * 2);
+  margin: 0 auto;
+
+  @include breakpoints.mq(pc) {
+    max-width: calc(1080px + 40px * 2);
+  }
+}
+
+// コンテンツ
+.footer-contact__contents-wrapper {
+  margin-top: 30px;
+
+  @media (min-width: 600px) {
+    max-width: 900px;
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.footer-contact__contents {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: 600px) {
+    gap: 60px;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+  }
+}
+
+.footer-contact__content1 {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.footer-contact__text {
+  max-width: 365px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin: 0 auto;
+
+  @media (min-width: 600px) {
+    padding: 0;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
+
+.footer-contact-link-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+  @media (min-width: 600px) {
+    gap: 20px;
+  }
+}
+
+// snsリンク
+.footer-contact__sns__link {
+  gap: 20px;
+}
+
+.footer-contact__sns__link-item {
+  img {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+// メール送信リンク
+.footer-contact__mail {
+  width: fit-content;
+  height: 40px;
+  margin: 0 auto;
+  background: common-css.$color1;
+  padding: 3px 20px 3px 20px;
+  border-radius: 25px;
+  border: 1px solid common-css.$color3;
+  display: flex;
+  align-items: center;
+
+  a {
+    p {
+      color: common-css.$color3;
+      font-size: 14px;
+      font-weight: 700;
+      transition: color 0.5s;
+    }
+  }
+
+  transition: transform 0.5s;
+
+  @media (min-width: 600px) {
+    @media (any-hover: hover) {
+      &:hover {
+        transform: scale(1.1);
+
+        a {
+          p {
+            color: common-css.$color5;
+          }
+        }
+
+        .footer-contact__mail-icon {
+          background: url(/img/icon/mail/email_icon-blow.png) no-repeat center
+            center / contain;
+        }
+      }
+    }
+  }
+}
+
+.footer-contact__mail-link {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-contact__mail-icon {
+  width: 20px;
+  height: 20px;
+  background: url(/img/icon/mail/email_icon-brown.png) no-repeat center center /
+    contain;
+  transition: background 0.5s;
+}
+
+.footer-contact__content2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+
+  @media (min-width: 600px) {
+    flex-direction: column;
+    gap: 25px;
+  }
+}
+
+// ページトップボタン
+.pagetop-icon {
+  display: block;
+  width: 100px;
+
+  transition: transform 0.3s;
+  @media (min-width: 600px) {
+    width: 130px;
+
+    @media (any-hover: hover) {
+      &:hover {
+        transform: scale(1.15);
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+// pc表示のみ　メニュー
+.footer__menu-pc {
+  display: none;
+  font-family: common-css.$font-family-en;
+
+  @include breakpoints.mq(pc) {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.footer__menu-pc-item {
+  transition: transform 0.3s;
+  font-size: 16px;
+
+  @media (any-hover: hover) {
+    &:hover {
+      cursor: pointer;
+
+      transform: scale(1.15);
+
+      &::after {
+        scale: 1;
+        transform-origin: left center;
+        transition: scale 0.5s ease;
+      }
+    }
+  }
+}

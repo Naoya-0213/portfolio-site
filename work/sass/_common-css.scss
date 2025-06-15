@@ -1,0 +1,206 @@
+@use "../sass/breakpoints";
+
+// ================================================
+//  work 共通css登録
+// ================================================
+// font
+$font-family-jp: "Noto San JP", sans-serif;
+$font-family-en: "Oswald", serif;
+
+$font-size-sp: 14px;
+$font-size-pc: 15px;
+
+$font-weight-base: 400;
+$line-height: 1.6;
+
+// color
+$color1: #f3f0eb;
+$color2: #d7cdbe;
+$color3: #795549;
+$color4: #c7c4c4;
+$color5: #96b3d1;
+
+// その他↓
+
+// js用:ハンバーガーメニュー展開中のスクロール禁止
+.no-scroll {
+  overflow: hidden;
+}
+
+// 共通クラス指定
+.body-wrapper {
+  overflow: hidden;
+}
+
+body {
+  font-family: $font-family-jp;
+  font-size: $font-size-sp;
+  font-weight: $font-weight-base;
+  line-height: $line-height;
+  background: $color1;
+  color: $color3;
+
+  @media (min-width: 900px) {
+    font-size: $font-size-pc;
+  }
+}
+
+.inner {
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @include breakpoints.mq(pc) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+// sp時に非表示
+.hidden-sp {
+  @include breakpoints.mq(sp) {
+    display: none;
+  }
+}
+
+// pc時に非表示
+.hidden-pc {
+  @include breakpoints.mq(pc) {
+    display: none;
+  }
+}
+
+// 430px以上のときに非常時（about me用）
+.hidden-430px {
+  @media (min-width: 430px) {
+    display: none;
+  }
+}
+
+// セクションタイトル
+.section__title {
+}
+
+.section__title-head {
+  font-size: 24px;
+  font-weight: 700;
+  font-family: $font-family-en;
+
+  @include breakpoints.mq(pc) {
+    font-size: 28px;
+  }
+}
+
+.section__title-sub {
+  font-size: 14px;
+}
+
+// 共通ボタン
+.common-button {
+  width: fit-content;
+  height: 35px;
+  background: $color3;
+  padding: 3px 20px 3px 20px;
+  border-radius: 25px;
+  border: 1px solid $color3;
+  display: flex;
+  align-items: center;
+
+  @include breakpoints.mq(pc) {
+    height: 40px;
+  }
+
+  p {
+    color: $color1;
+    font-size: 14px;
+    font-weight: 700;
+    transition: color 0.5s;
+  }
+
+  transition: background 0.5s;
+  @media (any-hover: hover) {
+    &:hover {
+      background: $color2;
+
+      p {
+        color: $color3;
+      }
+    }
+  }
+}
+
+// 共通ボタン　小
+.common-button-small {
+  width: fit-content;
+  height: fit-content;
+  background: $color3;
+  padding: 3px 15px 3px 15px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+
+  p {
+    color: $color1;
+    font-size: 10px;
+  }
+}
+
+// 数字ボタン
+.number-button {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: $color3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    margin-top: 3px;
+    height: 22px;
+    color: $color1;
+    font-size: 12px;
+  }
+}
+
+// to be continued
+.to-be-continued {
+  text-align: right;
+  padding-right: 20px;
+
+  p {
+    font-family: $font-family-en;
+    font-weight: 700;
+  }
+}
+
+// セクション要素のふわっと表示
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 1s, transform 1s;
+
+  &.js-in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-down {
+  opacity: 0;
+  transform: translateY(-24px);
+  transition: opacity 1s, transform 1s;
+
+  &.js-in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s;
+
+  &.js-in-view {
+    opacity: 1;
+  }
+}

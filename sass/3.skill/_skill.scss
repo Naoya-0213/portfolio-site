@@ -1,0 +1,242 @@
+@use "../breakpoints";
+@use "../common-css";
+
+// ================================================
+// skill
+// ================================================
+.skill {
+  margin-top: 30px;
+
+  @include breakpoints.mq(pc) {
+    margin-top: 50px;
+  }
+
+  @media (min-width: 1080px) {
+    margin-top: 70px;
+  }
+}
+
+.skill__inner {
+  max-width: calc(600px + 20px * 2);
+  margin: 0 auto;
+
+  @include breakpoints.mq(pc) {
+    max-width: calc(1080px + 40px * 2);
+  }
+}
+
+.skill__contents {
+  margin-top: 25px;
+
+  @include breakpoints.mq(pc) {
+    margin-top: 40px;
+  }
+}
+
+.skill__items {
+  display: grid;
+  grid-auto-flow: row;
+
+  // display: flex;
+  // flex-direction: column;
+  gap: 20px;
+  padding: 0 10px 0 10px;
+
+  @include breakpoints.mq(pc) {
+    grid-auto-flow: column;
+  }
+
+  @media (min-width: 1080px) {
+    gap: 40px;
+  }
+}
+
+.skill__item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 10px 20px 10px;
+
+  &:nth-child(1),
+  &:nth-child(2) {
+    border-bottom: 1px solid common-css.$color2;
+
+    @include breakpoints.mq(pc) {
+      border: none;
+    }
+  }
+
+  @include breakpoints.mq(pc) {
+    padding-bottom: 10px;
+    border: none;
+  }
+}
+
+.skill__item-head {
+  display: flex;
+  gap: 15px;
+}
+
+.skill__item-head-img {
+  width: 25px;
+  height: 25px;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.skill__item-head-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.skill__item-text {
+  p {
+    // @include breakpoints.mq(tb) {
+    //   font-size: 14px;
+    // }
+  }
+}
+
+// ================================================
+// アコーディオン
+// ================================================
+.skill__accordion {
+  margin-top: 10px;
+
+  @include breakpoints.mq(pc) {
+    margin-top: 30px;
+  }
+}
+
+.skill__accordion-item {
+  &.is-open {
+    .skill__accordion-icon {
+      &::after {
+        transform: rotate(0deg);
+      }
+    }
+  }
+}
+
+.is-open {
+}
+
+// 展開前
+.skill__accordion-q {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.js-skill__accordion-q {
+}
+
+.skill__accordion-head {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill__accordion-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid common-css.$color3;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: calc(20px - 2px);
+    left: calc(10px - 1px);
+    background: common-css.$color3;
+
+    width: 20px;
+    height: 1px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+
+    top: calc(20px - 2px);
+    left: calc(10px - 1px);
+    background: common-css.$color3;
+
+    width: 20px;
+    height: 1px;
+
+    transform: rotate(90deg);
+    transition: transform 0.3s;
+  }
+}
+
+.skill__accordion-head-text {
+  color: common-css.$color5;
+
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+// 展開後
+.js-skill__accordion-a {
+  display: none;
+
+  &.is-open {
+    display: block;
+  }
+}
+
+.skill__accordion-a {
+}
+
+.skill__accordion-next {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.skill__accordion-next-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px 20px 0 20px;
+
+  @include breakpoints.mq(pc) {
+    padding: 40px 30px 0 30px;
+  }
+}
+
+.skill__accordion-next-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  padding: 0 20px 20px 20px;
+
+  &:nth-child(1) {
+    border-bottom: 1px solid common-css.$color2;
+  }
+
+  @include breakpoints.mq(pc) {
+    flex-direction: row;
+  }
+}
+
+.skill__accordion-next-title {
+  color: common-css.$color5;
+
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.6;
+
+  @include breakpoints.mq(pc) {
+    min-width: 115px;
+  }
+}
+
+.skill__accordion-next-text {
+}

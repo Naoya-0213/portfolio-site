@@ -1,0 +1,18 @@
+// ブレークポイント指定
+$breakpoints: (
+  // 375px以下（スマホ）の指定をしたい場合
+  "ssp": "not screen and (min-width: 375px)",
+
+  //767px以下（スマホ）用の表示
+  "sp": "not screen and (min-width: 767px)",
+  //768px以上（PC）用の表示
+  "pc": "screen and (min-width: 768px)",
+  //768px以上＋899px以下（タブレット）用の表示
+  "tb": "screen and (min-width: 768px) and  (max-width: 899px)"
+) !default;
+
+@mixin mq($breakpoint: pc) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}

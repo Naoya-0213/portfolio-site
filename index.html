@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 検索 no hit -->
+    <title>コーダー「Naoya」によるポートフォリオサイト</title>
+
+    <meta
+      name="description"
+      content="デザインからコーディングまで一貫して作成したポートフォリオサイトです。制作実績やスキル、自己紹介を掲載しています。ぜひご覧ください。"
+    />
+
+    <!-- ファビコン -->
+    <link rel="icon" href="/img/icon/favicon.ico" type="image/x-icon" />
+
+    <!-- === Twitterカード === -->
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- アカウント -->
+    <meta name="twitter:site" content="@Naoya__in_web" />
+
+    <!-- タイトル -->
+    <meta
+      name="twitter:title"
+      content="コーダー「Naoya」によるポートフォリオサイト"
+    />
+
+    <!-- 説明文 -->
+    <meta
+      name="twitter:description"
+      content="デザインからコーディングまで一貫して作成したポートフォリオサイトです。制作実績やスキル、自己紹介を掲載しています。ぜひご覧ください。"
+    />
+
+    <!-- 画像URL（統一してwebp） -->
+    <meta
+      name="twitter:image"
+      content="https://made-in-naoya.com/img/twitter-card-image.webp"
+    />
+
+    <!-- Open Graph用の補足（統一してwebp） -->
+    <meta
+      property="og:title"
+      content="コーダー「Naoya」によるポートフォリオサイト"
+    />
+    <meta
+      property="og:description"
+      content="デザインからコーディングまで一貫して作成したポートフォリオサイトです。制作実績やスキル、自己紹介を掲載しています。ぜひご覧ください。"
+    />
+    <meta
+      property="og:image"
+      content="https://made-in-naoya.com/img/twitter-card-image.webp"
+    />
+    <meta property="og:url" content="https://made-in-naoya.com/" />
+    <meta property="og:type" content="website" />
+
+    <!-- === Twitterカード === -->
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- swiper読み込み -->
+    <link rel="stylesheet" href="./css/lib/swiper-bundle.min.css" />
+
+    <!-- css読み込み -->
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="body-wrapper">
+      <!-- 1.header ================================================================ -->
+      <header class="header">
+        <!-- ハンバーガーアイコン表示 -->
+        <button id="js-drawer-icon" class="header-open">
+          <span class="drawer-icon__bar"></span>
+          <span class="drawer-icon__bar"></span>
+        </button>
+
+        <!-- sp）ドロワーメニュー -->
+        <div id="js-drawer__menu" class="drawer__menu">
+          <div class="drawer__menu__contents">
+            <!-- navメニュー -->
+            <nav class="drawer__nav">
+              <!-- menu1：home-->
+              <a href="#fv" class="drawer__nav__link">
+                <div class="drawer__nav__link-wrapper">
+                  <img
+                    src="./img/icon/home/paper-plane_icon-brown.png"
+                    alt="icon"
+                  />
+                  <span>Home -</span>
+                </div>
+              </a>
+
+              <!-- menu2：skill-->
+              <a href="#skill" class="drawer__nav__link">
+                <div class="drawer__nav__link-wrapper">
+                  <img src="./img/icon/skill/skill_icon-brown.png" alt="icon" />
+                  <span>Skill -</span>
+                </div>
+              </a>
+
+              <!-- menu3：work -->
+              <a href="#work" class="drawer__nav__link">
+                <div class="drawer__nav__link-wrapper">
+                  <img src="./img/icon/work/pc_icon-brown.png" alt="icon" />
+                  <span>Work -</span>
+                </div>
+              </a>
+
+              <!-- menu4：About me -->
+              <a href="#about-me" class="drawer__nav__link">
+                <div class="drawer__nav__link-wrapper">
+                  <img
+                    src="./img/icon/about-me/user_icon-brown.png"
+                    alt="icon"
+                  />
+                  <span>About me -</span>
+                </div>
+              </a>
+
+              <!-- menu5：contact -->
+              <a href="#contact" class="drawer__nav__link">
+                <div class="drawer__nav__link-wrapper">
+                  <img src="./img/icon/mail/email_icon-brown.png" alt="icon" />
+                  <span>Contact -</span>
+                </div>
+              </a>
+
+              <!-- snsリンク -->
+              <div class="sns__link">
+                <div class="sns__link-item">
+                  <a href="#" target="_blank" rel="nofollow noopener">
+                    <img
+                      src="./img/icon/line/line_icon-brown.png"
+                      alt="sns-icon"
+                    />
+                  </a>
+                </div>
+
+                <div class="sns__link-item">
+                  <a
+                    href="https://x.com/Naoya__in_web"
+                    target="_blank"
+                    rel="nofollow noopener"
+                  >
+                    <img src="./img/icon/x/x_icon-brown.png" alt="sns-icon" />
+                  </a>
+                </div>
+
+                <div class="sns__link-item">
+                  <a href="#" target="_blank" rel="nofollow noopener">
+                    <img
+                      src="./img/icon/instagram/instagram_icon-brown.png"
+                      alt="sns-icon"
+                    />
+                  </a>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+
+        <!-- pc）ドロワーメニュー -->
+        <div id="js-drawer__menu-pc" class="drawer__menu-pc">
+          <div class="drawer__menu-pc__contents">
+            <!-- navメニュー -->
+            <nav class="drawer__nav-pc">
+              <!-- menu1：home-->
+              <a href="#fv" class="drawer__nav__link-pc">
+                <div class="drawer__nav__link-wrapper-pc">
+                  <img
+                    src="./img/icon/home/paper-plane_icon-brown.png"
+                    alt="icon"
+                  />
+                  <span>Home -</span>
+                </div>
+              </a>
+
+              <!-- menu2：skill-->
+              <a href="#skill" class="drawer__nav__link-pc">
+                <div class="drawer__nav__link-wrapper-pc">
+                  <img src="./img/icon/skill/skill_icon-brown.png" alt="icon" />
+                  <span>Skill -</span>
+                </div>
+              </a>
+
+              <!-- menu3：work -->
+              <a href="#work" class="drawer__nav__link-pc">
+                <div class="drawer__nav__link-wrapper-pc">
+                  <img src="./img/icon/work/pc_icon-brown.png" alt="icon" />
+                  <span>Work -</span>
+                </div>
+              </a>
+
+              <!-- menu4：About me -->
+              <a href="#about-me" class="drawer__nav__link-pc">
+                <div class="drawer__nav__link-wrapper-pc">
+                  <img
+                    src="./img/icon/about-me/user_icon-brown.png"
+                    alt="icon"
+                  />
+                  <span>About me -</span>
+                </div>
+              </a>
+
+              <!-- menu5：contact -->
+              <a href="#contact" class="drawer__nav__link-pc">
+                <div class="drawer__nav__link-wrapper-pc">
+                  <img src="./img/icon/mail/email_icon-brown.png" alt="icon" />
+                  <span>Contact -</span>
+                </div>
+              </a>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      <!-- 2.fv ==================================================================== -->
+      <section class="fv" id="fv">
+        <div class="fv__inner">
+          <div class="fv__contents">
+            <!-- fv画像 -->
+            <div class="fv__img">
+              <!-- デコレーション -->
+              <div class="fv-decoration"></div>
+            </div>
+
+            <!-- sp）logo -->
+            <img
+              src="./img/logo/naoya-portfolio-logo.webp"
+              alt="ロゴ画像"
+              class="fv__logo-sp"
+            />
+
+            <!-- pc）menu -->
+            <div class="fv__menu-pc">
+              <!-- pc）logo -->
+              <div class="fv__logo-pc">
+                <img
+                  src="./img/logo/naoya-portfolio-logo-brown.webp"
+                  alt="ロゴ画像"
+                />
+              </div>
+
+              <!-- pc）nav -->
+              <div class="fv__menu__nav-pc">
+                <nav class="nav-pc">
+                  <!-- menu1：home-->
+                  <a href="#fv" class="nav__link-pc">
+                    <div class="nav__link-wrapper-pc">
+                      <img
+                        src="./img/icon/home/paper-plane_icon-brown.png"
+                        alt="icon"
+                      />
+                      <span>Home -</span>
+                    </div>
+                  </a>
+
+                  <!-- menu2：skill-->
+                  <a href="#skill" class="nav__link-pc">
+                    <div class="nav__link-wrapper-pc">
+                      <img
+                        src="./img/icon/skill/skill_icon-brown.png"
+                        alt="icon"
+                      />
+                      <span>Skill -</span>
+                    </div>
+                  </a>
+
+                  <!-- menu3：work -->
+                  <a href="#work" class="nav__link-pc">
+                    <div class="nav__link-wrapper-pc">
+                      <img src="./img/icon/work/pc_icon-brown.png" alt="icon" />
+                      <span>Work -</span>
+                    </div>
+                  </a>
+
+                  <!-- menu4：About me -->
+                  <a href="#about-me" class="nav__link-pc">
+                    <div class="nav__link-wrapper-pc">
+                      <img
+                        src="./img/icon/about-me/user_icon-brown.png"
+                        alt="icon"
+                      />
+
+                      <span>About me -</span>
+                    </div>
+                  </a>
+
+                  <!-- menu5：contact -->
+                  <a href="#contact" class="nav__link-pc">
+                    <div class="nav__link-wrapper-pc">
+                      <img
+                        src="./img/icon/mail/email_icon-brown.png"
+                        alt="icon"
+                      />
+                      <span>Contact -</span>
+                    </div>
+                  </a>
+
+                  <!-- snsリンク -->
+                  <div class="sns__link-pc">
+                    <div class="sns__link-pc-item">
+                      <a href="#" target="_blank" rel="nofollow noopener">
+                        <img
+                          src="./img/icon/line/line_icon-brown.png"
+                          alt="sns-icon"
+                        />
+                      </a>
+                    </div>
+
+                    <div class="sns__link-pc-item">
+                      <a
+                        href="https://x.com/Naoya__in_web"
+                        target="_blank"
+                        rel="nofollow noopener"
+                      >
+                        <img
+                          src="./img/icon/x/x_icon-brown.png"
+                          alt="sns-icon"
+                        />
+                      </a>
+                    </div>
+
+                    <div class="sns__link-pc-item">
+                      <a href="#" target="_blank" rel="nofollow noopener">
+                        <img
+                          src="./img/icon/instagram/instagram_icon-brown.png"
+                          alt="sns-icon"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3.skill ================================================================= -->
+      <section class="skill" id="skill">
+        <div class="skill__inner inner">
+          <!-- セクションタイトル -->
+          <div class="section__title fade-in-up">
+            <h1 class="section__title-head">Skill -</h1>
+            <p class="section__title-sub">今の私に出来る事</p>
+          </div>
+
+          <!-- スキル内容 -->
+          <div class="skill__contents">
+            <div class="skill__items">
+              <!-- スキル1 -->
+              <div class="skill__item">
+                <div class="skill__item-head">
+                  <!-- アイコン -->
+                  <div class="skill__item-head-img fade-in-up">
+                    <img
+                      src="./img/icon/code/code_icon-brown.png"
+                      alt="アイコン"
+                    />
+                  </div>
+                  <!-- スキル内容タイトル -->
+                  <h2 class="skill__item-head-title fade-in-up">
+                    コーディング
+                  </h2>
+                </div>
+
+                <!-- スキル説明 -->
+                <div class="skill__item-text fade-in-up">
+                  <p>
+                    デザインカンプを忠実に再現し、高い精度で仕上げることが得意です。また誰が見ても分かりやすく、保守性の高いコードを書くことを常に意識しています。
+                  </p>
+                </div>
+              </div>
+
+              <!-- スキル2 -->
+              <div class="skill__item">
+                <div class="skill__item-head">
+                  <!-- アイコン -->
+                  <div class="skill__item-head-img fade-in-up">
+                    <img
+                      src="./img/icon/pencil/pen_icon-brown.png"
+                      alt="アイコン"
+                    />
+                  </div>
+                  <!-- スキル内容タイトル -->
+                  <h2 class="skill__item-head-title fade-in-up">
+                    ホームページ修正
+                  </h2>
+                </div>
+
+                <!-- スキル説明 -->
+                <div class="skill__item-text fade-in-up">
+                  <p>
+                    既存のホームページの修正やアップデートにも柔軟に対応いたします。静的なサイトを、魅力的でインタラクティブな動的サイトへとアップグレードさせることもお任せください。
+                  </p>
+                </div>
+              </div>
+
+              <!-- スキル3 -->
+              <div class="skill__item">
+                <div class="skill__item-head">
+                  <!-- アイコン -->
+                  <div class="skill__item-head-img fade-in-up">
+                    <img
+                      src="./img/icon/light/idea_icon-brown.png"
+                      alt="アイコン"
+                    />
+                  </div>
+                  <!-- スキル内容タイトル -->
+                  <h2 class="skill__item-head-title fade-in-up">
+                    ホームページ相談
+                  </h2>
+                </div>
+
+                <!-- スキル説明 -->
+                <div class="skill__item-text fade-in-up">
+                  <p>
+                    ホームページ制作に関するご相談を無料でお受けしております。些細な内容でもお気軽にご相談ください。窓口はサイト下部の問い合わせ先まで！
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- アコーディオン -->
+            <div class="skill__accordion">
+              <div class="skill__accordion-item">
+                <!-- 展開前 -->
+                <div class="skill__accordion-q js-skill__accordion-q">
+                  <div class="skill__accordion-head">
+                    <div class="skill__accordion-icon fade-in-up"></div>
+                    <p class="skill__accordion-head-text fade-in-up">
+                      スキルを詳しく見る
+                    </p>
+                  </div>
+                </div>
+
+                <!-- 展開後 -->
+                <div class="js-skill__accordion-a skill__accordion-a">
+                  <div class="skill__accordion-next">
+                    <div class="skill__accordion-next-items">
+                      <!-- skill 1 -->
+                      <div class="skill__accordion-next-item">
+                        <div class="skill__accordion-next-title fade-in-up">
+                          HTML＆CSS
+                        </div>
+                        <p class="skill__accordion-next-text fade-in-up">
+                          規則性のあるコーディングを意識し、可読性や保守性を重視したコードを書くことができます。エディターは「Visual
+                          Studio
+                          Code」を使用しており、拡張機能を活用しながら効率的にコーディングを行っています。
+                        </p>
+                      </div>
+
+                      <!-- skill 2 -->
+                      <div class="skill__accordion-next-item">
+                        <div class="skill__accordion-next-title fade-in-up">
+                          JavaScript
+                        </div>
+                        <p class="skill__accordion-next-text fade-in-up">
+                          jQueryを活用し、インタラクティブで躍動感のあるウェブサイトを制作することが可能です。アニメーションやスムーズスクロールなど、ユーザー体験を向上させる動的なエフェクトの実装を得意としています。
+                        </p>
+                      </div>
+                    </div>
+                    <div class="to-be-continued fade-in-up">
+                      <p>To be continued...</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4.work ================================================================== -->
+      <section class="work" id="work">
+        <div class="work__inner inner">
+          <!-- セクションタイトル -->
+          <div class="section__title fade-in-up">
+            <h1 class="section__title-head">Works -</h1>
+            <p class="section__title-sub">これまで作成したサイト実績</p>
+          </div>
+        </div>
+
+        <!-- swiper -->
+        <div class="work__card">
+          <div class="work__card__inner">
+            <div class="work__swiper-container">
+              <div class="swiper work__swiper">
+                <div class="swiper-wrapper work__swiper-wrapper">
+                  <!-- swiperコンテンツ1）Naoya's portfolio-->
+                  <div class="swiper-slide work__swiper-slide">
+                    <a
+                      href="./work/naoya-portfolio.html"
+                      rel="nofollow noopener"
+                      class="work__detals-link"
+                    >
+                      <div class="work__swiper-slide-contents">
+                        <div class="pc-img">
+                          <img
+                            src="./img/work/naoya-portfolio/naoya-portfolio-pc.webp"
+                            alt="サイトイメージ画像pc"
+                          />
+                        </div>
+                        <div class="sp-img">
+                          <img
+                            src="./img/work/naoya-portfolio/naoya-portfolio.webp"
+                            alt="サイトイメージ画像sp"
+                          />
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <!-- swiperコンテンツ2）onomichi -->
+                  <div class="swiper-slide work__swiper-slide">
+                    <a
+                      href="./work/onomichi.html"
+                      rel="nofollow noopener"
+                      class="work__detals-link"
+                    >
+                      <div class="work__swiper-slide-contents">
+                        <div class="pc-img">
+                          <img
+                            src="./img/work/onomichi/onomichi-pc.webp"
+                            alt="サイトイメージ画像pc"
+                          />
+                        </div>
+                        <div class="sp-img">
+                          <img
+                            src="./img/work/onomichi/onomichi.webp"
+                            alt="サイトイメージ画像sp"
+                          />
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <!-- swiperコンテンツ3）sabolon -->
+                  <div class="swiper-slide work__swiper-slide">
+                    <a
+                      href="./work/sabolon.html"
+                      rel="nofollow noopener"
+                      class="work__detals-link"
+                    >
+                      <div class="work__swiper-slide-contents">
+                        <div class="pc-img">
+                          <img
+                            src="./img/work/sabolon/sabolon-pc.webp"
+                            alt="サイトイメージ画像pc"
+                          />
+                        </div>
+                        <div class="sp-img">
+                          <img
+                            src="./img/work/sabolon/sabolon.webp"
+                            alt="サイトイメージ画像sp"
+                          />
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <!-- swiperコンテンツ4）oha -->
+                  <div class="swiper-slide work__swiper-slide">
+                    <a
+                      href="./work/oha.html"
+                      rel="nofollow noopener"
+                      class="work__detals-link"
+                    >
+                      <div class="work__swiper-slide-contents">
+                        <div class="pc-img">
+                          <img
+                            src="./img/work/oha/oha-pc.webp"
+                            alt="サイトイメージ画像pc"
+                          />
+                        </div>
+                        <div class="sp-img">
+                          <img
+                            src="./img/work/oha/oha.webp"
+                            alt="サイトイメージ画像sp"
+                          />
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-pagination work__swiper-pagination"></div>
+              <div class="swiper-button-prev work__swiper-button-prev">
+                <img src="./img/icon/next/next-left.png" alt="prevボタン" />
+              </div>
+              <div class="swiper-button-next work__swiper-button-next">
+                <img src="./img/icon/next/next-right.png" alt="nextボタン" />
+              </div>
+            </div>
+          </div>
+
+          <!-- デコレーション　吹き出し -->
+          <div class="swiper__decoration">
+            <img
+              src="./img/icon/balloon/icon-click-left.webp"
+              alt="クリック吹き出し"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- 5.about me ============================================================== -->
+      <section class="about-me" id="about-me">
+        <div class="about-me__inner inner">
+          <!-- セクションタイトル -->
+          <div class="section__title fade-in-up">
+            <h1 class="section__title-head">About Me -</h1>
+            <p class="section__title-sub">私について</p>
+          </div>
+
+          <!-- コンテンツ -->
+          <div class="about-me__wrapper">
+            <div class="about-me__contents">
+              <!-- 写真・名前 -->
+              <div class="about-me__head">
+                <div class="about-me__image fade-in-up">
+                  <img
+                    src="./img/about-me/about-me__picture.webp"
+                    alt="自分の写真"
+                  />
+                </div>
+                <div class="about-me__name">
+                  <h2 class="about-me__name-main fade-in-up">Naoya Noguchi</h2>
+                  <p class="about-me__name-sub fade-in-up">野口 直也</p>
+                </div>
+
+                <!-- デコレーション -->
+                <div class="about-me_decoration">
+                  <img
+                    src="./img/about-me/about-me__decoration.png"
+                    alt="デコレーション"
+                  />
+                </div>
+              </div>
+
+              <!-- テキスト -->
+              <div class="about-me__head-text fade-in-up">
+                1999年東京都生まれ。中央大学商学部を卒業後、新卒でFA機器を扱う専門商社に入社。4年間ルート営業を担当し、顧客ニーズに寄り添った提案や業務効率化のサポートを通じて信頼を築き、売上拡大に貢献。<br /><br />以前から関心のあったweb制作の世界に挑戦すべく、独学で学び始め、現在はオンラインスクール「デイトラ」で学習中。今後はフロントエンドエンジニアを目指すと同時に、webデザインについても学習を深め、幅広い領域で需要の高い人材を目指します。
+              </div>
+            </div>
+
+            <!-- モーダル -->
+            <div class="about-me__modal">
+              <!-- モーダル1 -->
+              <button
+                class="modal__open-btn common-button"
+                data-dialog="modal1"
+              >
+                これまでの学習内容
+              </button>
+
+              <!-- モーダル2 -->
+              <button
+                class="modal__open-btn common-button"
+                data-dialog="modal2"
+              >
+                これから学習したい事
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- モーダル1 これまでの学習内容 -->
+      <dialog
+        id="modal1"
+        aria-labelledby="modal-head1"
+        aria-describedby="modal1"
+        class="modal__content"
+      >
+        <button class="modal__close-btn">
+          <img
+            src="./img/about-me/modal-close-icon.png"
+            alt="モーダルクローズアイコン"
+          />
+        </button>
+        <div class="modal__inner">
+          <div class="modal__body">
+            <h3 id="modal-head1">これまでの学習内容</h3>
+            <div id="modal__text1">
+              <div class="modal__text-items">
+                <!-- 学習内容1 -->
+                <div class="modal__text-item">
+                  <div class="modal__text-item-head">
+                    <div
+                      class="modal__text-head-date common-button-small fade-in-up"
+                    >
+                      <p>2023年5月</p>
+                    </div>
+                    <h2 class="modal__text-head-title fade-in-up">
+                      「ITパスポート」取得
+                    </h2>
+                  </div>
+                  <div class="modal__text-item-main fade-in-up">
+                    <p>ITの体系的な基礎知識を得るため取得。</p>
+                  </div>
+                </div>
+
+                <!-- 学習内容2 -->
+                <div class="modal__text-item">
+                  <div class="modal__text-item-head">
+                    <div
+                      class="modal__text-head-date common-button-small fade-in-up"
+                    >
+                      <p>2023年7月</p>
+                    </div>
+                    <h2 class="modal__text-head-title fade-in-up">
+                      「基本情報技術者試験」取得
+                    </h2>
+                  </div>
+                  <div class="modal__text-item-main fade-in-up">
+                    <p>
+                      ITパスポート以上の知識を深めるとともに、プログラミングの基礎にも触れることを目的として資格を取得。
+                    </p>
+                  </div>
+                </div>
+
+                <!-- 学習内容3 -->
+                <div class="modal__text-item">
+                  <div class="modal__text-item-head">
+                    <div
+                      class="modal__text-head-date common-button-small fade-in-up"
+                    >
+                      <p>2023年8月</p>
+                    </div>
+                    <h2 class="modal__text-head-title fade-in-up">
+                      独学にてweb制作学習スタート
+                    </h2>
+                  </div>
+                  <div class="modal__text-item-main fade-in-up">
+                    <p>
+                      書籍やProgate、模写コーディングサイトなどの学習リソースを活用し、独学でweb制作学習をスタート。
+                    </p>
+                  </div>
+                </div>
+
+                <!-- 学習内容4 -->
+                <div class="modal__text-item">
+                  <div class="modal__text-item-head">
+                    <div
+                      class="modal__text-head-date common-button-small fade-in-up"
+                    >
+                      <p>2024年5月</p>
+                    </div>
+                    <h2 class="modal__text-head-title fade-in-up">
+                      オンラインスクール入会。
+                    </h2>
+                  </div>
+                  <div class="modal__text-item-main fade-in-up">
+                    <p>
+                      独学での学習の非効率さを実感し、思い切って「デイトラ」への入会を決意。web制作コースを受講。
+                    </p>
+                  </div>
+                </div>
+
+                <!-- 学習内容5 -->
+                <div class="modal__text-item">
+                  <div class="modal__text-item-head">
+                    <div
+                      class="modal__text-head-date common-button-small fade-in-up"
+                    >
+                      <p>2024年6月</p>
+                    </div>
+                    <h2 class="modal__text-head-title fade-in-up">
+                      HTML / CSS
+                    </h2>
+                  </div>
+                  <div class="modal__text-item-main fade-in-up">
+                    <p>
+                      正しい順序での学習を目指し、HTML / CSS から再スタート。
+                    </p>
+                  </div>
+                </div>
+
+                <!-- 学習内容6 -->
+                <div class="modal__text-item">
+                  <div class="modal__text-item-head">
+                    <div
+                      class="modal__text-head-date common-button-small fade-in-up"
+                    >
+                      <p>2024年7月</p>
+                    </div>
+                    <h2 class="modal__text-head-title fade-in-up">
+                      JavaScript
+                    </h2>
+                  </div>
+                  <div class="modal__text-item-main fade-in-up">
+                    <p>
+                      jQueryを活用し、動的なサイトの作成方法を体系的に学習。ユーザーの操作に応じて変化するインタラクティブな要素や、柔軟なアニメーションの実装技術を習得。
+                    </p>
+                  </div>
+                </div>
+
+                <!-- 学習内容7 -->
+                <div class="modal__text-item">
+                  <div class="modal__text-item-head">
+                    <div
+                      class="modal__text-head-date common-button-small fade-in-up"
+                    >
+                      <p>2024年8月</p>
+                    </div>
+                    <h2 class="modal__text-head-title fade-in-up">
+                      デモサイト制作
+                    </h2>
+                  </div>
+                  <div class="modal__text-item-main fade-in-up">
+                    <p>
+                      スクールの課題として、3つの架空サイトを制作。与えられたデザインカンプをもとに、視覚的な魅力とユーザーの使いやすさを重視し、動きのある見やすいサイトの実装を意識して制作しました。
+                    </p>
+                  </div>
+                </div>
+
+                <!-- 学習内容8 -->
+                <div class="modal__text-item">
+                  <div class="modal__text-item-head">
+                    <div
+                      class="modal__text-head-date common-button-small fade-in-up"
+                    >
+                      <p>2024年12月</p>
+                    </div>
+                    <h2 class="modal__text-head-title fade-in-up">
+                      ポートフォリオ作成
+                    </h2>
+                  </div>
+                  <div class="modal__text-item-main fade-in-up">
+                    <p>
+                      実績掲載用のポートフォリオサイトとして、デザイン設計からコーディング、公開まで一貫して自作しました。これまで学んだ技術を応用し、動きのある見やすいサイトを意識して制作しました。
+                    </p>
+                  </div>
+                </div>
+
+                <div class="to-be-continued fade-in-up">
+                  <p>To be continued...</p>
+                </div>
+
+                <!-- 閉じるボタン -->
+                <div class="modal__text-close-button common-button fade-in-up">
+                  <p>閉じる</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </dialog>
+
+      <!-- モーダル2 これから学習したい事 -->
+      <dialog
+        id="modal2"
+        aria-labelledby="modal-head2"
+        aria-describedby="modal2"
+        class="modal__content"
+      >
+        <button class="modal__close-btn">
+          <img
+            src="./img/about-me/modal-close-icon.png"
+            alt="モーダルクローズアイコン"
+          />
+        </button>
+        <div class="modal__inner">
+          <div class="modal__body">
+            <h3 id="modal-head2" class="fade-in-up">これから学習したい事</h3>
+            <div id="modal__text2">
+              <div class="modal__text-items">
+                <!-- 学習したい内容1 -->
+                <div class="modal__text-item">
+                  <div class="modal__text2-item-head">
+                    <div
+                      class="modal__text-head-number number-button fade-in-up"
+                    >
+                      <p>1</p>
+                    </div>
+                    <h2 class="modal__text-head-title fade-in-up">WordPress</h2>
+                  </div>
+                  <div class="modal__text-item-main fade-in-up">
+                    <p>
+                      世界中のwebサイトで利用されている汎用性の高さ、自由度の高いカスタマイズ性から、近日中に学習開始予定。
+                    </p>
+                  </div>
+                </div>
+
+                <!-- 学習したい内容2 -->
+                <div class="modal__text-item">
+                  <div class="modal__text2-item-head">
+                    <div
+                      class="modal__text-head-number number-button fade-in-up"
+                    >
+                      <p>2</p>
+                    </div>
+                    <h2 class="modal__text-head-title fade-in-up">PHP</h2>
+                  </div>
+                  <div class="modal__text-item-main fade-in-up">
+                    <p>
+                      WordPressやECサイトの開発に必要なサーバーサイドの処理を習得するため、幅広く活用されているPHPを学習予定。
+                    </p>
+                  </div>
+                </div>
+
+                <!-- 学習したい内容3 -->
+                <div class="modal__text-item">
+                  <div class="modal__text2-item-head">
+                    <div
+                      class="modal__text-head-number number-button fade-in-up"
+                    >
+                      <p>3</p>
+                    </div>
+                    <h2 class="modal__text-head-title fade-in-up">
+                      React・Vue.jsなどの<br
+                        class="hidden-430px"
+                      />ライブラリやフレームワーク
+                    </h2>
+                  </div>
+                  <div class="modal__text-item-main fade-in-up">
+                    <p>
+                      動的で使いやすいwebアプリケーションを作るスキルを身につけ、実践的な開発力を高めることで、業界のニーズに応えるエンジニアを目指す。
+                    </p>
+                  </div>
+                </div>
+
+                <!-- 学習したい内容4 -->
+                <div class="modal__text-item">
+                  <div class="modal__text2-item-head">
+                    <div
+                      class="modal__text-head-number number-button fade-in-up"
+                    >
+                      <p>4</p>
+                    </div>
+                    <h2 class="modal__text-head-title fade-in-up">
+                      Webデザイン
+                    </h2>
+                  </div>
+                  <div class="modal__text-item-main fade-in-up">
+                    <p>
+                      UI/UXデザインの基本を学び、洗練されたweb制作ができる人材を目指す。また、FigmaやIllustratorなどのツールを習得し、デザイナーとの連携を強化することで、高品質な成果物の提供を目標とする。
+                    </p>
+                  </div>
+                </div>
+
+                <div class="to-be-continued fade-in-up">
+                  <p>To be continued...</p>
+                </div>
+
+                <!-- 閉じるボタン -->
+                <div class="modal__text-close-button common-button fade-in-up">
+                  <p>閉じる</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </dialog>
+
+      <!-- 6.like ================================================================== -->
+      <section class="like">
+        <div class="like__inner inner">
+          <!-- セクションタイトル -->
+          <div class="section__title fade-in-up">
+            <h1 class="section__title-head">Like -</h1>
+            <p class="section__title-sub">好きな事・趣味</p>
+          </div>
+
+          <!-- コンテンツ -->
+          <div class="like__contents">
+            <div class="like__items">
+              <!-- スノーボード -->
+              <div class="like__item">
+                <div class="like__item-head">
+                  <div class="like__item-head-number number-button fade-in-up">
+                    <p>1</p>
+                  </div>
+                  <div class="like__item-head-title fade-in-up">
+                    スノーボード
+                  </div>
+                </div>
+                <div class="like__item-text fade-in-up">
+                  高校3年からスノーボードにハマっています。冬になれば、ほぼ毎週行くくらい好きです！これまで、29か所ものスキー場を訪問しました。今シーズンの目標は、北海道のニセコに滑りに行くこと！
+                </div>
+              </div>
+
+              <!-- カメラ -->
+              <div class="like__item">
+                <div class="like__item-head">
+                  <div class="like__item-head-number number-button fade-in-up">
+                    <p>2</p>
+                  </div>
+                  <div class="like__item-head-title fade-in-up">カメラ</div>
+                </div>
+                <div class="like__item-text fade-in-up">
+                  <span>念願のGR3！手にカメラとともに旅へ。</span
+                  ><br />特別な場所や日常のひとコマ、切り取るたびに広がる新しい世界。その中から、お気に入りの写真を少しだけご紹介します！
+                </div>
+              </div>
+            </div>
+
+            <!-- デコレーション -->
+            <div class="like__decoration1">
+              <img src="./img/icon/ski/ski_icon-brown.png" alt="スキーimg" />
+            </div>
+            <div class="like__decoration2">
+              <img
+                src="./img/icon/snowboard/snowboard_icon-brown.png"
+                alt="スノボimg"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- swiper -->
+        <div class="like__card">
+          <div class="like__card__inner">
+            <div class="like__swiper-container">
+              <div class="swiper like__swiper">
+                <div class="swiper-wrapper like__swiper-wrapper">
+                  <!-- 写真1 -->
+                  <div class="swiper-slide like__swiper-slide">
+                    <div class="like__swiper-slide__contents">
+                      <div class="like__swiper-slide__image">
+                        <img
+                          src="./img/like/camera__picture1.webp"
+                          alt="撮影写真"
+                        />
+                      </div>
+                      <div class="like__swiper-slide__main">
+                        <div
+                          class="like__swiper-slide-date common-button-small"
+                        >
+                          <p>2024年3月</p>
+                        </div>
+                        <p class="like__swiper-slide__text">
+                          念願のGR3を購入！
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 写真2 -->
+                  <div class="swiper-slide like__swiper-slide">
+                    <div class="like__swiper-slide__contents">
+                      <div class="like__swiper-slide__image">
+                        <img
+                          src="./img/like/camera__picture2.webp"
+                          alt="撮影写真"
+                        />
+                      </div>
+                      <div class="like__swiper-slide__main">
+                        <div
+                          class="like__swiper-slide-date common-button-small"
+                        >
+                          <p>2024年5月</p>
+                        </div>
+                        <p class="like__swiper-slide__text">
+                          ハリーポッターでお馴染みのバタービール！
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 写真3 -->
+                  <div class="swiper-slide like__swiper-slide">
+                    <div class="like__swiper-slide__contents">
+                      <div class="like__swiper-slide__image">
+                        <img
+                          src="./img/like/camera__picture3.webp"
+                          alt="撮影写真"
+                        />
+                      </div>
+                      <div class="like__swiper-slide__main">
+                        <div
+                          class="like__swiper-slide-date common-button-small"
+                        >
+                          <p>2024年8月</p>
+                        </div>
+                        <p class="like__swiper-slide__text">
+                          夏の一枚。<br />カラフルで綺麗...!
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 写真4 -->
+                  <div class="swiper-slide like__swiper-slide">
+                    <div class="like__swiper-slide__contents">
+                      <div class="like__swiper-slide__image">
+                        <img
+                          src="./img/like/camera__picture4.webp"
+                          alt="撮影写真"
+                        />
+                      </div>
+                      <div class="like__swiper-slide__main">
+                        <div
+                          class="like__swiper-slide-date common-button-small"
+                        >
+                          <p>2024年9月</p>
+                        </div>
+                        <p class="like__swiper-slide__text">
+                          愛媛県下灘駅の踏切にて。よい天気〜
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 写真5 -->
+                  <div class="swiper-slide like__swiper-slide">
+                    <div class="like__swiper-slide__contents">
+                      <div class="like__swiper-slide__image">
+                        <img
+                          src="./img/like/camera__picture5.webp"
+                          alt="撮影写真"
+                        />
+                      </div>
+                      <div class="like__swiper-slide__main">
+                        <div
+                          class="like__swiper-slide-date common-button-small"
+                        >
+                          <p>2024年9月</p>
+                        </div>
+                        <p class="like__swiper-slide__text">
+                          スティッチが大好き！ <br />可愛くて即決購入！笑
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 写真6 -->
+                  <div class="swiper-slide like__swiper-slide">
+                    <div class="like__swiper-slide__contents">
+                      <div class="like__swiper-slide__image">
+                        <img
+                          src="./img/like/camera__picture6.webp"
+                          alt="撮影写真"
+                        />
+                      </div>
+                      <div class="like__swiper-slide__main">
+                        <div
+                          class="like__swiper-slide-date common-button-small"
+                        >
+                          <p>2024年9月</p>
+                        </div>
+                        <p class="like__swiper-slide__text">
+                          ハワイ旅行中にて。<br />海が綺麗すぎた...
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 写真7 -->
+                  <div class="swiper-slide like__swiper-slide">
+                    <div class="like__swiper-slide__contents">
+                      <div class="like__swiper-slide__image">
+                        <img
+                          src="./img/like/camera__picture7.webp"
+                          alt="撮影写真"
+                        />
+                      </div>
+                      <div class="like__swiper-slide__main">
+                        <div
+                          class="like__swiper-slide-date common-button-small"
+                        >
+                          <p>2024年11月</p>
+                        </div>
+                        <p class="like__swiper-slide__text">
+                          ハリーポッターで出てくるあの駅...！
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- 写真8 -->
+                  <div class="swiper-slide like__swiper-slide">
+                    <div class="like__swiper-slide__contents">
+                      <div class="like__swiper-slide__image">
+                        <img
+                          src="./img/like/camera__picture8.webp"
+                          alt="撮影写真"
+                        />
+                      </div>
+                      <div class="like__swiper-slide__main">
+                        <div
+                          class="like__swiper-slide-date common-button-small"
+                        >
+                          <p>2024年11月</p>
+                        </div>
+                        <p class="like__swiper-slide__text">
+                          実はfv画像も自分で撮影してます！
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination like__swiper-pagination"></div>
+              <div class="swiper-button-prev like__swiper-button-prev">
+                <img src="./img/icon/next/next-left.png" alt="prevボタン" />
+              </div>
+              <div class="swiper-button-next like__swiper-button-next">
+                <img src="./img/icon/next/next-right.png" alt="nextボタン" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7.contact =============================================================== -->
+      <section class="footer-contact" id="contact">
+        <div class="footer-contact__inner inner">
+          <!-- セクションタイトル -->
+          <div class="section__title">
+            <h1 class="section__title-head">Contact -</h1>
+            <p class="section__title-sub">お問い合わせ</p>
+          </div>
+
+          <!-- コンテンツ -->
+          <div class="footer-contact__contents-wrapper">
+            <div class="footer-contact__contents">
+              <div class="footer-contact__content1">
+                <div class="footer-contact__text">
+                  <p>
+                    HP作成などのご依頼、その他問い合わせは当アドレスへご連絡ください。XのDMでも受付しております。<br />＊line・Instagramは、準備中です...
+                  </p>
+                </div>
+
+                <!-- メール送信リンク -->
+                <div class="footer-contact__mail">
+                  <a
+                    href="mailto:naoya.work0213&#64;gmail.com"
+                    class="footer-contact__mail-link"
+                  >
+                    <div class="footer-contact__mail-icon"></div>
+                    <p>naoya.work0213@gmail.com</p></a
+                  >
+                </div>
+              </div>
+
+              <div class="footer-contact__content2">
+                <!-- ページトップボタン -->
+                <button class="pagetop-icon js-pagetop-icon">
+                  <img
+                    src="./img/icon/balloon/icon-pagetop.webp"
+                    alt="ページトップアイコン"
+                  />
+                </button>
+
+                <div class="footer-contact-link-wrapper">
+                  <!-- snsリンク -->
+                  <div class="sns__link footer-contact__sns__link">
+                    <div class="sns__link-item footer-contact__sns__link-item">
+                      <a href="#" target="_blank" rel="nofollow noopener">
+                        <img
+                          src="./img/icon/line/line_icon-cream2.png"
+                          alt="sns-icon"
+                        />
+                      </a>
+                    </div>
+
+                    <div class="sns__link-item footer-contact__sns__link-item">
+                      <a
+                        href="https://x.com/Naoya__in_web"
+                        target="_blank"
+                        rel="nofollow noopener"
+                      >
+                        <img
+                          src="./img/icon/x/x_icon-cream2.png"
+                          alt="sns-icon"
+                        />
+                      </a>
+                    </div>
+
+                    <div class="sns__link-item footer-contact__sns__link-item">
+                      <a href="#" target="_blank" rel="nofollow noopener">
+                        <img
+                          src="./img/icon/instagram/instagram_icon-cream2.png"
+                          alt="sns-icon"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="footer__menu-pc">
+              <a href="#fv" class="footer__menu-pc-item">Home -</a>
+              <a href="#skill" class="footer__menu-pc-item">Skill -</a>
+              <a href="#work" class="footer__menu-pc-item">Work -</a>
+              <a href="#about-me" class="footer__menu-pc-item">About me -</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8.footer ================================================================ -->
+      <footer class="footer">
+        <div class="footer__copylight-wrapper">
+          <div class="footer__copylight">
+            <span>Icons made by フリーピック from www.flaticon.com</span>
+            <small>© 2024 Naoya’s Portfolio</small>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- 読み込み ================================================================ -->
+    <!-- swiper js読み込み -->
+    <script src="./js/lib/swiper-bundle.min.js"></script>
+
+    <!-- GSAPライブラリを読み込み -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <!-- jQuery読み込み -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- js読み込み -->
+    <script src="./js/script.js"></script>
+  </body>
+</html>
